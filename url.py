@@ -1,4 +1,4 @@
-from shortcuts import DistSite
+from dist_site import DistSite
 
 
 class Url:

@@ -1,4 +1,4 @@
-from shortcuts import Url
+from url import Url
 from selenium import webdriver
 from selenium.webdriver import DesiredCapabilities
 

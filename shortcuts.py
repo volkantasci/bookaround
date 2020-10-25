@@ -1,3 +1,3 @@
-from page import *
-from url import *
-from dist_site import *
+from page import Page
+from url import Url
+from dist_site import DistSite
