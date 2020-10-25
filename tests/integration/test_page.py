@@ -1,6 +1,4 @@
-from page import Page
-from dist_site import DistSite
-from url import Url
+from shortcuts import *
 from unittest import TestCase
 
 

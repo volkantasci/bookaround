@@ -1,5 +1,5 @@
 from unittest import TestCase
-from dist_site import DistSite
+from shortcuts import DistSite
 
 
 class DistSiteTest(TestCase):
