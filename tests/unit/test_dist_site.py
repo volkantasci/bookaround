@@ -4,7 +4,7 @@ from dist_site import DistSite
 
 class DistSiteTest(TestCase):
     def setUp(self) -> None:
-        self.site1 = DistSite('Kidega', 'query', 'https://kidega.com/arama', 'searcHeadArea.txt')
+        self.site1 = DistSite('Kidega', 'query', 'https://kidega.com/arama', 'searcHeadArea.txt', 20, 'page')
 
     def test_attributes(self):
         self.assertEqual('Kidega', self.site1.name)

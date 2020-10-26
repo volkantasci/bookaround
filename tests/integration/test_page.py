@@ -6,8 +6,8 @@ from unittest import TestCase
 
 class PageTest(TestCase):
     def setUp(self) -> None:
-        self.kidega_site = DistSite('Kidega', 'query', 'https://kidega.com/arama', 'searcHeadArea.txt')
-        self.idefix_site = DistSite('Idefix', 'Q', 'https://idefix.com/search', 'searcHeadArea.txt')
+        self.kidega_site = DistSite('Kidega', 'query', 'https://kidega.com/arama', 'searcHeadArea.txt', 20, 'page')
+        self.idefix_site = DistSite('Idefix', 'Q', 'https://idefix.com/search', 'searcHeadArea.txt', 36, 'Page')
         self.url_kidega = Url(self.kidega_site, 'python')
         self.url_idefix = Url(self.idefix_site, 'python')
 
