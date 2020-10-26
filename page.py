@@ -8,13 +8,14 @@ class Page:
         self.command_executor = command_executor
         self.query_url = url.query_url
         self.page_source = self.__get_page_source__()
+        self.url = url
 
     def __get_page_source__(self):
         driver = webdriver.Remote(command_executor=self.command_executor,
                                   desired_capabilities=DesiredCapabilities.CHROME)
 
         driver.get(self.query_url)
-        driver.implicitly_wait(5)
+        driver.implicitly_wait(3)
         html = driver.page_source
         driver.close()
 

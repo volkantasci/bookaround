@@ -1,4 +1,3 @@
-from page import Page
 from url import Url
 from dist_site import DistSite
 from unittest import TestCase
@@ -6,10 +5,14 @@ from unittest import TestCase
 
 class UrlTest(TestCase):
     def setUp(self) -> None:
-        self.site1_no_adt_params = DistSite('Kidega', 'query', 'https://kidega.com/arama')
-        self.site2_no_adt_params = DistSite('Idefix', 'Q', 'https://idefix.com/search')
-        self.site3_with_adt_params = DistSite('Kidega', 'query', 'https://kidega.com/arama', {'categories[]': '30053'})
-        self.site4_with_adt_params = DistSite('Idefix', 'Q', 'https://idefix.com/search', {'ActiveCategoryId': '11693'})
+        self.site1_no_adt_params = DistSite('Kidega', 'query', 'https://kidega.com/arama', 'searcHeadArea.txt',
+                                            20, 'page')
+        self.site2_no_adt_params = DistSite('Idefix', 'Q', 'https://idefix.com/search',
+                                            'TotalDocumentCount', 36, 'Page')
+        self.site3_with_adt_params = DistSite('Kidega', 'query', 'https://kidega.com/arama', 'searcHeadArea.txt',
+                                              20, 'page', {'categories[]': '30053'})
+        self.site4_with_adt_params = DistSite('Idefix', 'Q', 'https://idefix.com/search', 'searcHeadArea.txt',
+                                              36, 'Page', {'ActiveCategoryId': '11693'},)
 
         self.url1 = Url(self.site1_no_adt_params, 'python')
         self.url2 = Url(self.site2_no_adt_params, 'python')
